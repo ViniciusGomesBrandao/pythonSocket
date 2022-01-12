@@ -21,5 +21,5 @@ def loopRequest():
         sleep(1)
         requests.get("http://127.0.0.1:8080")
 if __name__ == '__main__':
-    Thread(target = startServer).start()
-    Thread(target = loopRequest).start()
+    server = Thread(target = startServer).start()
+    loop = Thread(target = loopRequest).start()
